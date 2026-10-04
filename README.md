@@ -2,6 +2,10 @@
 
 A Cloudflare Pages demonstration of independent operators accepting delegated tasks, applying local Datalog policies, and billing the original payer through a shared clearinghouse. Biscuit tokens and Ed25519 signatures are real; operators, work, and credits are simulated.
 
+**Live demo:** [biscuits.demos.darkedges.com](https://biscuits.demos.darkedges.com/#biscuit)
+
+![Relay playground showing the agent network, credit ledger, granted permissions, and Biscuit decision logic](docs/playground-screenshot.png)
+
 ## Run locally
 
 Use Node.js 22 or newer and pnpm 11:
