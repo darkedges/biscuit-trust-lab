@@ -1,10 +1,15 @@
 ---
-title: "Local policy, shared facts: the receiver's Datalog authorizer"
+title: 'Local policy, shared facts: the receiver''s Datalog authorizer'
 published: false
-description: "How each independent operator combines issuer facts, verified call facts, and its own trust settings in one Biscuit Datalog policy, and how each denial scenario fails."
-tags: security, authorization, datalog, javascript
+description: >-
+  How each independent operator combines issuer facts, verified call facts, and
+  its own trust settings in one Biscuit Datalog policy, and how each denial
+  scenario fails.
+tags: 'security, authorization, datalog, javascript'
 series: Biscuit Trust Lab
-cover_image: https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+cover_image: >-
+  https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+devto_id: 4794603
 ---
 
 So far in this series we've minted a root grant, narrowed it at each hop, and wrapped every delegation in a signed envelope. All of that tells the receiver what was delegated and by whom. It doesn't decide whether the receiver should do the work. That decision belongs to the receiver alone.
