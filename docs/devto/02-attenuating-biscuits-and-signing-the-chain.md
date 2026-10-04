@@ -1,16 +1,13 @@
 ---
 title: Attenuating Biscuit tokens and signing the delegation chain
 published: false
-<<<<<<< HEAD
 devto: true
 description: "Minting a Biscuit root grant in JavaScript, narrowing it at each hop, and adding signed delegation envelopes so receivers know who delegated what."
 tags: security, authorization, javascript, webassembly
-=======
 description: >-
   Minting a Biscuit root grant in JavaScript, narrowing it at each hop, and
   adding signed delegation envelopes so receivers know who delegated what.
 tags: 'security, authorization, javascript, webassembly'
->>>>>>> 209d4e722a199a900fb2f7e53b16ae376f2837d6
 series: Biscuit Trust Lab
 cover_image: >-
   https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
