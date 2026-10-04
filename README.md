@@ -114,3 +114,7 @@ The JavaScript tests exercise real Biscuit decisions, trust and requester policy
 For a real financial platform, add durable centralized accounting, persistent issuer/operator keys, authenticated transports, payer consent, quotes, revocation, reservation expiry, reconciliation, and dispute handling. An operator's signed receipt records its completion claim; it does not independently prove work quality.
 
 References: [Cloudflare Pages advanced mode](https://developers.cloudflare.com/pages/functions/advanced-mode/), [Biscuit authorization policies](https://doc.biscuitsec.org/getting-started/authorization-policies.html), [Biscuit JavaScript usage](https://doc.biscuitsec.org/usage/nodejs.html).
+
+## License
+
+[MIT](LICENSE)
