@@ -1,17 +1,14 @@
 ---
 title: 'Local policy, shared facts: the receiver''s Datalog authorizer'
 published: false
-<<<<<<< HEAD
 devto: true
 description: "How each independent operator combines issuer facts, verified call facts, and its own trust settings in one Biscuit Datalog policy, and how each denial scenario fails."
 tags: security, authorization, datalog, javascript
-=======
 description: >-
   How each independent operator combines issuer facts, verified call facts, and
   its own trust settings in one Biscuit Datalog policy, and how each denial
   scenario fails.
 tags: 'security, authorization, datalog, javascript'
->>>>>>> 209d4e722a199a900fb2f7e53b16ae376f2837d6
 series: Biscuit Trust Lab
 cover_image: >-
   https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
