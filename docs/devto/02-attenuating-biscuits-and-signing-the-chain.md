@@ -1,10 +1,14 @@
 ---
-title: "Attenuating Biscuit tokens and signing the delegation chain"
+title: Attenuating Biscuit tokens and signing the delegation chain
 published: false
-description: "Minting a Biscuit root grant in JavaScript, narrowing it at each hop, and adding signed delegation envelopes so receivers know who delegated what."
-tags: security, authorization, javascript, webassembly
+description: >-
+  Minting a Biscuit root grant in JavaScript, narrowing it at each hop, and
+  adding signed delegation envelopes so receivers know who delegated what.
+tags: 'security, authorization, javascript, webassembly'
 series: Biscuit Trust Lab
-cover_image: https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+cover_image: >-
+  https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+devto_id: 4794602
 ---
 
 In part 1 I introduced the network: Alice's request flows through PlannerCo to ResearchCo, SearchCo and ComputeCo, and every billable call goes through a clearinghouse. This post covers the token side: how the root grant is minted, how each hop narrows it, and why Biscuit alone isn't enough to prove *who* delegated.
