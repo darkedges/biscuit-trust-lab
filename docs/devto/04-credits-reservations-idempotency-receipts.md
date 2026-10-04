@@ -1,6 +1,7 @@
 ---
 title: "Credits without a mutable token: reservations, idempotency and receipts"
 published: false
+devto: true
 description: "Why a Biscuit can't carry a balance, and how a clearinghouse serializes reservations, deduplicates retries, releases failed work, and settles only against signed receipts."
 tags: security, javascript, distributedsystems, cloudflare
 series: Biscuit Trust Lab
