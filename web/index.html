@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Relay · Biscuit network lab</title><link rel="stylesheet" href="/style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="/" aria-label="Relay home"><span class="brandmark">r</span>relay<span class="brand-divider"></span><span class="brand-sub">NETWORK LAB</span></a><div class="top-right"><span class="live-dot"></span> Live sandbox <span class="pill">Biscuit + Datalog</span></div></header>
+<main>
+  <section class="intro"><div><div class="eyebrow">DELEGATED WORK. ACCOUNTABLE SPENDING.</div><h1>Trust travels.<br><span>Credits follow.</span></h1><p>Independent agents. One original request. Explore how signed permissions<br class="desktop"> and a shared clearinghouse keep every operation accountable.</p></div><div class="intro-note"><span class="small-label">THE EXPERIMENT</span><p>Who can act?<br>Who can delegate?<br><strong>Who pays?</strong></p><span class="tiny">Real signatures · Simulated credits</span></div></section>
+  <section class="workspace">
+    <aside class="controls panel"><div class="panel-heading"><h2>Configure a run</h2><span class="step">01</span></div>
+      <label for="scenario">Scenario</label><select id="scenario"><option value="happy">Authorized delegation</option><option value="payer_swap">Attempt to change the payer</option><option value="forbidden">Attempt a forbidden operation</option><option value="untrusted">Present an untrusted issuer</option><option value="overspend">Compete for 60-credit reservations</option><option value="retry">Retry the same operation</option><option value="failure">Fail after reserving credits</option></select>
+      <p class="helper" id="scenario-description"></p>
+      <div class="two-fields"><div><label for="requester">Original requester</label><select id="requester"><option value="alice">Alice</option><option value="bob">Bob</option></select></div><div><label for="budget">Budget <span class="muted">/ credits</span></label><input id="budget" type="number" min="1" max="10000" step="1" value="100" required></div></div>
+      <div class="section-label">OPERATOR TRUST <span class="tiny">caller → receiver</span></div><div id="edges" class="edge-list"></div>
+      <div class="add-edge"><select id="edge-from" aria-label="Calling operator"></select><span>→</span><select id="edge-to" aria-label="Receiving operator"></select><button id="add-edge" class="icon-button" aria-label="Add trust relationship">+</button></div>
+      <div class="section-label">ACCEPTED ORIGINAL REQUESTERS</div><div class="requester-table"><div class="requester-row table-label"><span>Operator</span><span>Alice</span><span>Bob</span></div><div id="accepts"></div></div>
+      <button id="run" class="primary">Run network <span>↗</span></button><p class="tiny footer-note">Each run starts with a fresh ledger and keys.</p><p id="error" role="alert" hidden></p>
+    </aside>
+    <div class="main-column">
+      <section class="panel network-panel"><div class="panel-heading"><div><h2>The agent network</h2><p class="tiny">Task delegation · click an operator to inspect its last call</p></div><span class="status-chip" id="run-status">Ready to run</span></div>
+        <div class="network" id="network"><svg class="connections" viewBox="0 0 780 340" preserveAspectRatio="none" aria-hidden="true"><defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#64748b"/></marker></defs><path d="M120 151 L237 151"/><path d="M337 151 L414 151 L414 72 L484 72"/><path d="M337 151 L414 151 L414 245 L484 245"/><path d="M584 72 L661 72"/></svg>
+          <div class="node requester-node"><span class="node-icon">A</span><strong id="requester-name">Alice</strong><small>Original requester</small></div>
+          <button class="node planner-node" data-operator="planner"><span class="node-icon">⌘</span><strong>PlannerCo</strong><small>Coordinate</small><span class="node-state">Root task</span></button>
+          <button class="node research-node" data-operator="research"><span class="node-icon">≋</span><strong>ResearchCo</strong><small>Research · 5 cr</small><span class="node-state">Awaiting run</span></button>
+          <button class="node search-node" data-operator="search"><span class="node-icon">⌕</span><strong>SearchCo</strong><small id="search-price">Search · 10 cr</small><span class="node-state">Awaiting run</span></button>
+          <button class="node compute-node" data-operator="compute"><span class="node-icon">⠿</span><strong>ComputeCo</strong><small id="compute-price">Compute · 25 cr</small><span class="node-state">Awaiting run</span></button>
+          <span class="network-caption">Permissions narrow at each delegation</span>
+        </div>
+        <div class="clearinghouse"><span class="clearing-icon">▤</span><div><strong>Shared clearinghouse</strong><p>Verify → reserve → execute → settle</p></div><span class="clearing-tag">Atomic reservations</span></div>
+        <div class="legend"><span><i class="legend-dot green"></i>Settled</span><span><i class="legend-dot red"></i>Denied</span><span><i class="legend-dot amber"></i>Released / reused</span><span class="legend-end">Single-process simulation of independent operators</span></div>
+      </section>
+      <section class="panel grant-panel" aria-label="Granted permissions"><div class="panel-heading"><div><h2>Granted permissions</h2><p class="tiny">Issued values and every restriction added as work moves across the network</p></div><span class="step">02</span></div><div class="grant-grid"><div class="grant-column"><div class="grant-section-title">ROOT BISCUIT · CLEARINGHOUSE</div><div id="grant-values"><p class="muted">Run the network to inspect the signed grant.</p></div></div><div class="grant-column"><div class="grant-section-title">TASK DELEGATIONS</div><div id="delegation-values"><p class="muted">Delegated checks appear here after a run.</p></div></div></div></section>
+      <section class="ledger-strip" aria-label="Credit ledger"><div><span>Authorized budget</span><strong id="metric-budget">100<small>cr</small></strong></div><div><span>Settled</span><strong id="metric-settled">0<small>cr</small></strong></div><div><span>Reserved</span><strong id="metric-reserved">0<small>cr</small></strong></div><div class="available"><span>Available</span><strong id="metric-available">100<small>cr</small></strong></div></section>
+      <section class="panel evidence-panel"><div class="evidence-header"><div class="tabs" role="tablist" aria-label="Run evidence"><button role="tab" aria-selected="true" data-tab="activity">Activity</button><button role="tab" aria-selected="false" data-tab="biscuit">Decision logic</button><button role="tab" aria-selected="false" data-tab="ledger">Ledger & receipts</button><button role="tab" aria-selected="false" data-tab="debug">Debug</button><button role="tab" aria-selected="false" data-tab="compare">Compare</button></div><button id="export" class="text-button" disabled>Export run ↓</button></div>
+        <div id="compare" class="tab-panel inspector-content" role="tabpanel" aria-label="Compare runs" hidden></div>
+        <div id="debug" class="tab-panel" role="tabpanel" aria-label="Debug requests and responses" hidden></div>
+        <div id="activity" class="tab-panel" role="tabpanel"><div class="empty-state"><span>↗</span><h3>Follow the work, end to end.</h3><p>Run a scenario to see authorization decisions, reservations,<br>and signed settlement receipts as one trace.</p></div></div>
+        <div id="biscuit" class="tab-panel" role="tabpanel" hidden><div class="inspector-toolbar"><label for="task-select">Inspect task</label><select id="task-select"><option value="root">Authority / original grant</option></select></div><div id="biscuit-content" class="inspector-content"><p class="muted">Run the network to generate a signed Biscuit.</p></div></div>
+        <div id="ledger" class="tab-panel" role="tabpanel" hidden><div id="ledger-content" class="inspector-content"><p class="muted">Settlements and signed receipts appear after a run.</p></div></div>
+      </section>
+    </div>
+  </section>
+  <footer><span>RELAY / BISCUIT NETWORK LAB</span><span>Authorization is local. Accounting is coordinated.</span><a href="https://doc.biscuitsec.org/" target="_blank" rel="noreferrer">Biscuit documentation ↗</a></footer>
+</main><script type="module" src="/app.js"></script></body></html>

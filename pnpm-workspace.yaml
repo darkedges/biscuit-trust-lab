@@ -1,0 +1,5 @@
+allowBuilds:
+  esbuild: true
+  workerd: true
+patchedDependencies:
+  '@biscuit-auth/biscuit-wasm@0.6.0': patches/@biscuit-auth__biscuit-wasm@0.6.0.patch

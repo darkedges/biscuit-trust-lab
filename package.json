@@ -1,0 +1,19 @@
+{
+  "name": "relay-biscuit-network-lab",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "packageManager": "pnpm@11.19.0",
+  "scripts": {
+    "dev": "wrangler pages dev web --port 8795",
+    "check": "node --test tests/*.test.mjs",
+    "dev:lan": "wrangler pages dev web --ip 10.0.0.35 --port 8795",
+    "deploy": "wrangler pages deploy web"
+  },
+  "dependencies": {
+    "@smithery/biscuit": "1.0.1"
+  },
+  "devDependencies": {
+    "wrangler": "^4.0.0"
+  }
+}

@@ -1,0 +1,13 @@
+diff --git a/package.json b/package.json
+--- a/package.json
++++ b/package.json
+@@ -27,4 +27,8 @@
+   "type": "module",
+   "exports": {
+-    "import": "./module/biscuit.js"
++    ".": {
++      "import": "./module/biscuit.js"
++    },
++    "./module/biscuit_bg.js": "./module/biscuit_bg.js",
++    "./module/biscuit_bg.wasm": "./module/biscuit_bg.wasm"
+   },

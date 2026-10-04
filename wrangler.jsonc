@@ -1,0 +1,6 @@
+{
+  "$schema": "./node_modules/wrangler/config-schema.json",
+  "name": "relay-biscuit-network-lab",
+  "pages_build_output_dir": "./web",
+  "compatibility_date": "2026-10-01"
+}
