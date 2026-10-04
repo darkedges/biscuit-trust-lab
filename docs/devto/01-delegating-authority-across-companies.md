@@ -1,11 +1,21 @@
 ---
-title: "Delegating authority across companies with Biscuit tokens"
+title: Delegating authority across companies with Biscuit tokens
 published: false
+<<<<<<< HEAD
 devto: true
 description: "A hands-on lab where independent operators accept delegated work, apply their own Datalog policies, and bill the original payer, using real Biscuit tokens and Ed25519 signatures."
 tags: security, authorization, javascript, cloudflare
+=======
+description: >-
+  A hands-on lab where independent operators accept delegated work, apply their
+  own Datalog policies, and bill the original payer, using real Biscuit tokens
+  and Ed25519 signatures.
+tags: 'security, authorization, javascript, cloudflare'
+>>>>>>> 209d4e722a199a900fb2f7e53b16ae376f2837d6
 series: Biscuit Trust Lab
-cover_image: https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+cover_image: >-
+  https://raw.githubusercontent.com/darkedges/biscuit-trust-lab/main/docs/playground-screenshot.png
+devto_id: 4794601
 ---
 
 Alice wants a piece of work done. Her organization pays for it. She hands the job to a coordinator, and the coordinator splits it between other companies. Some of those companies pass part of the job on again.
