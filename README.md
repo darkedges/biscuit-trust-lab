@@ -4,6 +4,8 @@ A Cloudflare Pages demonstration of independent operators accepting delegated ta
 
 **Live demo:** [biscuits.demos.darkedges.com](https://biscuits.demos.darkedges.com/#biscuit)
 
+**AAuth version:** the same operators and scenarios rebuilt on [AAuth](https://datatracker.ietf.org/doc/html/draft-hardt-oauth-aauth-protocol) are in [darkedges/aauth-lab](https://github.com/darkedges/aauth-lab) (live at [aauth.demos.darkedges.com](https://aauth.demos.darkedges.com)). Its [COMPARISON.md](https://github.com/darkedges/aauth-lab/blob/main/COMPARISON.md) compares the two scenario by scenario.
+
 ![Relay playground showing the agent network, credit ledger, granted permissions, and Biscuit decision logic](docs/playground-screenshot.png)
 
 ## Run locally
